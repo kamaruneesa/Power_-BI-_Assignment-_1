@@ -2,7 +2,8 @@
 ## 📝Data Transformation &amp; Data Modeling 
 ## Power-BI Desktop Window ➡️ Get Data ➡️Transform ➡️Text/csv ➡️List of order
 ➡️next power query editor ➡️home ➡️new source ➡️text/csv➡️ order details, sales target ➡️open
- **Data Transformation:**
+
+**Data Transformation:**
   - 1) Restrict the "List of Orders" table to only the first 500 rows: Home tab➡️keep top rows➡️ click ➡️500 ok
   - 2)data type 'Date':  Amount and Target column header click➡️fixed decimal number
   -  3)Format the "Customer Name" column into proper case: List of order table   "Customer Name" ➡️Add column ➡️Transform➡️Capitalize each word
@@ -13,15 +14,24 @@
    - if profit is less then 0 then "loss"
    - else if profit is = 0 then "Break-Even"
    -else if profit is greater than 0, then "Profit".
+
  **Merging Data (Joins):**
   - Merge the "List of Orders" and "Order Details" tables : Home tab➡️merge queries➡️ select tables ➡️left outer join ➡️ok
- **Handling Missing Data & Duplicate Data:**
+
+
+**Handling Missing Data & Duplicate Data:**
+
   - Identify missing values:Remove Error
   - Handle duplicates: Remove Duplicates
- **Sorting and Filtering Data:**
+
+
+**Sorting and Filtering Data:**
+
   - Sorting :Order date column ➡️filter icon click ➡️Short Descending
   - Filtering:Order date column ➡️filter icon click ➡️Tamil Nadu-check,all-uncheck➡️ok
+    
  **Grouping and Aggregating Data:**
+
  - “Order Details” table :Oder table right click ➡️Reference➡️select new table➡️Home➡️Transform ➡️Group By➡️
         - calculate the count of each Order ID: Basic➡️ Order ID ➡️new column name:count of Order ID,Operation: count rows
         -   average profit by Category :Oder table right click ➡️Reference➡️select new table➡️Home➡️Transform ➡️Group By➡️
@@ -29,7 +39,20 @@
         - total amount by Sub-Category: Oder table right click ➡️Reference➡️select new table➡️Home➡️Transform ➡️Group By➡️
               ADVANCED ➡️ Add aggregation ➡️new column name: average profit,Operation: average,column:profit
 
-- 
+- the total target amount: Sales Traget  right click ➡️Reference➡️select new table➡️Home➡️Transform ➡️Group By➡️
+         Basic➡️ Month of Order Date ➡️new column name:Total Target,Operation: sum,column:target
+
+
+
+
+**Data Modeling:**
+ - Relationship between the “List of Orders” and “Order Details” tables: Model view ➡️List of order id table➡️ drag order id ➡️ order details table ➡️connect order id:  cardinality =many to many
+
+-  Relationship between the “Order Details” and “Sales Target” tables :Model view ➡️“Order Details” ➡️drag category ➡️ “Sales Target” ➡️connect category .  cardinality=many to many
+
+
+
+  
 
 
    
