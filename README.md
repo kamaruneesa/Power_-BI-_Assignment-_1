@@ -5,7 +5,8 @@
 
 **Data Transformation:**
   - 1) Restrict the "List of Orders" table to only the first 500 rows: Home tab➡️keep top rows➡️ click ➡️500 ok
-  - 2)data type 'Date':  Amount and Target column header click➡️fixed decimal number
+  - 2)data type 'Date' :Date column header click➡️fixed Date  (using this didn't change it in the main window, change power query window, used locale too ,same result.)data view window➡️order date column click & select ➡️column tools ➡️formatting ➡️format: dd/mm/yyyy➡️ok 
+  - 3)data type:Amount and Target column header click➡️fixed decimal number
   -  3)Format the "Customer Name" column into proper case: List of order table   "Customer Name" ➡️Add column ➡️Transform➡️Capitalize each word
   - 4)Merge: ctrl+ select column = "State" and "City" ➡️Add column➡️Merge column➡️ Separator :comma ➡️New column name:Location➡️ok
   - 5)Create a new custom column :Add column ➡️Profit margin ➡️[profit]/[amount]➡️ok
