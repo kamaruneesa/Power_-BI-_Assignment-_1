@@ -3,15 +3,40 @@
 ## Power-BI Desktop Window ➡️ Get Data ➡️Transform ➡️Text/csv ➡️List of order
 ➡️next power query editor ➡️home ➡️new source ➡️text/csv➡️ order details, sales target ➡️open
  **Data Transformation:**
-  - **● Restrict the "List of Orders" table to only the first 500 rows: Home tab➡️keep top rows➡️ click ➡️500 ok
-  - ** data type 'Date':  Amount and Target column header click➡️fixed decimal number
-  - ** Format the "Customer Name" column into proper case: List of order table   "Customer Name" ➡️Add column ➡️Transform➡️Capitalize each word
-  - **Merge: ctrl+ select column = "State" and "City" ➡️Add column➡️Merge column➡️ Separator :comma ➡️New column name:Location➡️ok
-  - **Create a new custom column :Add column ➡️Profit margin ➡️[profit]/[amount]➡️ok
-  - Add a new conditional column named "Profit Status": Add column➡️conditional column➡️ new column name: "Profit Status"➡️condition:
+  - 1) Restrict the "List of Orders" table to only the first 500 rows: Home tab➡️keep top rows➡️ click ➡️500 ok
+  - 2)data type 'Date':  Amount and Target column header click➡️fixed decimal number
+  -  3)Format the "Customer Name" column into proper case: List of order table   "Customer Name" ➡️Add column ➡️Transform➡️Capitalize each word
+  - 4)Merge: ctrl+ select column = "State" and "City" ➡️Add column➡️Merge column➡️ Separator :comma ➡️New column name:Location➡️ok
+  - 5)Create a new custom column :Add column ➡️Profit margin ➡️[profit]/[amount]➡️ok
+  - 6)Add a new conditional column named "Profit Status": Add column➡️conditional column➡️ new column name: "Profit Status"➡️condition:
      
    - if profit is less then 0 then "loss"
    - else if profit is = 0 then "Break-Even"
    -else if profit is greater than 0, then "Profit".
- **Merging Data (Joins):** 
+ **Merging Data (Joins):**
+  - Merge the "List of Orders" and "Order Details" tables : Home tab➡️merge queries➡️ select tables ➡️left outer join ➡️ok
+ **Handling Missing Data & Duplicate Data:**
+  - Identify missing values:Remove Error
+  - Handle duplicates: Remove Duplicates
+ **Sorting and Filtering Data:**
+  - Sorting :Order date column ➡️filter icon click ➡️Short Descending
+  - Filtering:Order date column ➡️filter icon click ➡️Tamil Nadu-check,all-uncheck➡️ok
+ **Grouping and Aggregating Data:**
+ - “Order Details” table :Oder table right click ➡️Reference➡️select new table➡️Home➡️Transform ➡️Group By➡️
+        - calculate the count of each Order ID: Basic➡️ Order ID ➡️new column name:count of Order ID,Operation: count rows
+        -   average profit by Category :Oder table right click ➡️Reference➡️select new table➡️Home➡️Transform ➡️Group By➡️
+              ADVANCED ➡️ Add aggregation ➡️new column name: average profit,Operation: average,column:profit
+        - total amount by Sub-Category: Oder table right click ➡️Reference➡️select new table➡️Home➡️Transform ➡️Group By➡️
+              ADVANCED ➡️ Add aggregation ➡️new column name: average profit,Operation: average,column:profit
+
+- 
+
+
+   
+
+
+
+
+
+
   
